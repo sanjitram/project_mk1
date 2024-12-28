@@ -1,8 +1,8 @@
 // Load Firebase app and other modules from Firebase CDN
 // importScripts('firebase/firebase-app.js');
 // importScripts('firebase/firebase-database.js');
-import { initializeApp } from './firebase/firebase-app';
-import { getDatabase } from './firebase/firebase-database';
+// import { initializeApp } from './firebase/firebase-app';
+// import { getDatabase } from './firebase/firebase-database';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -17,8 +17,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database(app);
 // const database = firebase.database();
 
 console.log("Firebase initialized successfully!");
