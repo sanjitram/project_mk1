@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Codeforces Extension</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      max-width: 300px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px 0;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #1f8dd6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .info {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Codeforces Rooms</h2>
+  <button id="create-room">Create Room</button>
+  <input type="text" id="room-id" placeholder="Enter Room ID">
+  <button id="join-room">Join Room</button>
+  <div class="info" id="current-room">Not in a room</div>
+  <div class="info" id="current-challenge"></div>
+  <button id="leave-room">Leave Room</button>
+  <script src="popup.js"></script>
+</body>
+</html>

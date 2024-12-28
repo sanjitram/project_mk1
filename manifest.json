@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "Codeforces Room Extension",
+    "version": "1.0",
+    "description": "Enhances Codeforces with virtual rooms for real-time competitive programming challenges.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "notifications"
+    ],
+    "host_permissions": [
+      "https://codeforces.com/*"
+    ],
+    "background": {
+  "service_worker": "background.js",
+  "type":"module"
+},
+"content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/bell.png",
+        "48": "icons/pikavi.png",
+        "128": "icons/third.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://codeforces.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["firebase/firebase-app.js", "firebase/firebase-firestore.js", "firebase/firebase-auth.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

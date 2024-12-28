@@ -1,0 +1,136 @@
+/* General styles for the popup interface */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Headings */
+h2 {
+  font-size: 18px;
+  color: #1f8dd6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f8dd6;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #156bb5;
+}
+
+/* Input fields */
+input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #1f8dd6;
+  box-shadow: 0 0 5px rgba(31, 141, 214, 0.5);
+}
+
+/* Info sections */
+.info {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Countdown timer on problem pages */
+#countdown-timer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1f8dd6;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Challenge button on problem pages */
+#challenge-button {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1f8dd6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+#challenge-button:hover {
+  background-color: #156bb5;
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fade-in-out 3s forwards;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
