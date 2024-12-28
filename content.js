@@ -1,3 +1,46 @@
+// Dynamically load Firebase scripts
+function loadFirebaseScripts() {
+  const scripts = [
+    "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js",
+    "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"
+  ];
+
+  scripts.forEach((src) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.defer = true;
+    document.head.appendChild(script);
+  });
+}
+
+// Load Firebase scripts
+loadFirebaseScripts();
+
+// Initialize Firebase after scripts are loaded
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAsczsVrRNdzJSCJtEMW8TGZBBvAQSO7E",
+      authDomain: "coderclan-woc.firebaseapp.com",
+      databaseURL: "https://coderclan-woc-default-rtdb.firebaseio.com",
+      projectId: "coderclan-woc",
+      storageBucket: "coderclan-woc.firebasestorage.app",
+      messagingSenderId: "442267464037",
+      appId: "1:442267464037:web:474487deb8979c48acb18c",
+      measurementId: "G-LX1Y07G7VE"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database(app);
+    console.log("Firebase initialized successfully!");
+
+    // Now you can interact with Firebase (create room, join room, etc.)
+  }, 1000); // Wait for the scripts to load
+});
+
+
+
 // Add a "Challenge" button to the problem page
 function addChallengeButton() {
   const problemPage = document.querySelector('.problem-statement');
