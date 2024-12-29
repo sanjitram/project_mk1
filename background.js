@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs && tabs[0]) {
       const tab = tabs[0];
-      
+      console.log("Active tab URL:", tab.url);
       // Ensure tab.url exists
       if (tab.url && !tab.url.startsWith("chrome://")) {
         console.log("Injecting scripts into:", tab.url);

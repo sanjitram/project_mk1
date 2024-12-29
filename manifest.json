@@ -5,6 +5,7 @@
   "description": "Enhances Codeforces with virtual rooms for real-time competitive programming challenges.",
   "permissions": [
     "storage",
+    "tabs",
     "activeTab",
     "scripting",
     "notifications"
