@@ -1,4 +1,4 @@
-// background.js
+// background.js for firebase ver
 
 let currentRoomId = null;
 
