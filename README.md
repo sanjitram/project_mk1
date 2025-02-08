@@ -1,1 +1,1 @@
-# codeclan-chrome-extension
+# coderclan-chrome-extension
